@@ -7,7 +7,6 @@ class View
 {
     public function __construct()
     {
-        echo 'это вид!';
     }
 
     public function render($template)

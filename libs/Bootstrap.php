@@ -15,7 +15,6 @@ class Bootstrap
         switch (count($path)) {
             case 2:
                 $ctrl = !empty($path[1]) ? '\\controllers\\' . $path[1] : '\\controllers\\Index.php';//заглушка для контроллера по умолчанию
-                echo $ctrl;
                 break;
             case 3:
                 $ctrl = !empty($path[1]) ? '\\..\\controllers\\' . $path[1] : '\\controllers\\Index.php';
@@ -29,7 +28,6 @@ class Bootstrap
                 break;
         }
 
-        var_dump($ctrl);
         $file = __DIR__ . '/../' . $ctrl . '.php';
         if (file_exists($file)) {
             $controller = new $ctrl;
@@ -39,7 +37,7 @@ class Bootstrap
 
         } else {
             $ctrl = '\\..\\controllers\\Error.php';
-            $controller = new Index();
+            $controller = new Error();
         }
 
     }
