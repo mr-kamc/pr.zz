@@ -9,7 +9,8 @@ class Index extends Controller
     public function __construct()
     {
         parent::__construct();
-        echo 'мы в контроллере index!';
+        $this->view->msg = 'Главная';
+        $this->view->render('index/index');
     }
 
 }

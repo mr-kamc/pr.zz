@@ -3,6 +3,8 @@
 namespace controllers;
 
 
+use models\HelpModel;
+
 class Help extends Controller
 {
     public function __construct()
@@ -11,10 +13,9 @@ class Help extends Controller
         echo 'мы в конструкторе Help!';
     }
 
-    public function other($param)
+    public function other($arg=false)
     {
-        echo 'мы в методе other </br>';
-        echo 'Параметры:' . $param;
+        $model = new HelpModel();
     }
 
 }
