@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Header</title>
 
-    <link rel="stylesheet" href="/public/css/default.css">
+    <link rel="stylesheet" href="/publ/css/default.css">
 </head>
 <body>
 <header>
