@@ -28,6 +28,7 @@ class Bootstrap
                 break;
         }
 
+
         $file = __DIR__ . '/../' . $ctrl . '.php';
         if (file_exists($file)) {
             $controller = new $ctrl;
@@ -36,10 +37,11 @@ class Bootstrap
             }
 
         } else {
-            $ctrl = '\\..\\controllers\\Error.php';
-            $controller = new Error();
-        }
+            $ctrl = '\\..\\controllers\\Index.php';
+            $controller = new Index();
 
+        }
+echo $ctrl;
     }
 
 }

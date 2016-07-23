@@ -9,9 +9,15 @@ class View
     {
     }
 
-    public function render($template)
+    public function render($template, $noInclude = false)
     {
-        require __DIR__ . '/../views/' . $template . '.php';
+        if ($noInclude==true) {
+            require __DIR__ . '/../views/' . $template . '.php';
+        } else {
+            require __DIR__ . '/../views/header.php';
+            require __DIR__ . '/../views/' . $template . '.php';
+            require __DIR__ . '/../views/footer.php';
+        }
     }
 
 
