@@ -10,7 +10,13 @@ class Index extends Controller
     {
         parent::__construct();
         $this->view->msg = 'Главная';
+
+    }
+
+    public function index()
+    {
         $this->view->render('index/index');
+
     }
 
 }

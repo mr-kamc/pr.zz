@@ -9,7 +9,7 @@
 <body>
 <header>
     </br>
-    <a href = "Index">Index</a>
-    <a href = "Help">Help</a>
-    <a href = "Login">Login</a>
+    <a href = "/Index">Index</a>
+    <a href = "/Help">Help</a>
+    <a href = "/Login">Login</a>
 </header>

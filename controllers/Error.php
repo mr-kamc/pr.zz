@@ -9,7 +9,12 @@ class Error extends Controller
     {
         parent::__construct();
         $this->view->msg = 'Страницы не существует';
-        $this ->view->render('error/index');
+
+    }
+
+    public function index()
+    {
+        $this->view->render('error/index');
     }
 
 }
