@@ -22,6 +22,7 @@ class Bootstrap
             case 2:
                 $ctrl = file_exists(__DIR__ . '/../controllers/' . $path[1] . '.php') ? '\\controllers\\' . $path[1] : '\\controllers\\Error';
                 $control = new $ctrl;
+                //$control->loadModel('Login');//подключение модели
                 $control->index();
                 break;
             case 3:
