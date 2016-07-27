@@ -6,10 +6,10 @@ namespace controllers;
 class Index extends Controller
 {
 
-    public function __construct()
+    public function __construct($msg='Главная')
     {
         parent::__construct();
-        $this->view->msg = 'Главная';
+        $this->view->msg = $msg;
 
     }
 
