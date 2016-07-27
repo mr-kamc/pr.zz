@@ -20,15 +20,13 @@ class Bootstrap
 
         switch (count($path)){
             case 2:
-                $ctrl = file_exists(__DIR__ . '/../controllers/' . $path[1] . '.php') ? $path[1] : 'Error';
-                $name = '\\controllers\\' . $ctrl;
-                $control = new $name;
+                $ctrl = file_exists(__DIR__ . '/../controllers/' . $path[1] . '.php') ? '\\controllers\\' . $path[1] : '\\controllers\\Error';
+                $control = new $ctrl;
                 $control->index();
                 break;
             case 3:
-                $ctrl = file_exists(__DIR__ . '/../controllers/' . $path[1] . '.php') ? $path[1] : 'Error';
-                $name = '\\controllers\\' . $path[1];
-                $control = new $name();
+                $ctrl = file_exists(__DIR__ . '/../controllers/' . $path[1] . '.php') ? '\\controllers\\' . $path[1] : '\\controllers\\Error';
+                $control = new $ctrl();
                 if (method_exists($control,$path[2])){
                     $meth = $path[2];
                     $control->$meth();
